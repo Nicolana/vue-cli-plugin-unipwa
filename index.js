@@ -2,9 +2,10 @@ const fs = require('fs')
 const { chalk, warn } = require('@vue/cli-shared-utils')
 
 module.exports = (api, options) => {
-  // #ifndef H5
-  // return
-  // #endif
+  // Only support h5 platform
+  if (process.env.UNI_PLATFORM !== h5) {
+    return
+  }
   const userOptions = options.pwa || {}
 
   const manifestPath = api.resolve('public/manifest.json')
