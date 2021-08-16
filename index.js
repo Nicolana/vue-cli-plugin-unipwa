@@ -3,7 +3,7 @@ const { chalk, warn } = require('@vue/cli-shared-utils')
 
 module.exports = (api, options) => {
   // Only support h5 platform
-  if (process.env.UNI_PLATFORM !== h5) {
+  if (process.env.UNI_PLATFORM !== 'h5') {
     return
   }
   const userOptions = options.pwa || {}
