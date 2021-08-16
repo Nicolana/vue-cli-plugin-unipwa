@@ -2,8 +2,8 @@ const fs = require('fs')
 const { chalk, warn } = require('@vue/cli-shared-utils')
 
 module.exports = (api, options) => {
-    // #ifndef H5
-  return
+  // #ifndef H5
+  // return
   // #endif
   const userOptions = options.pwa || {}
 
