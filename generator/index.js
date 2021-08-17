@@ -4,7 +4,11 @@ module.exports = api => {
       'register-service-worker': '^1.7.1'
     }
   })
-  api.injectImports(api.entryFile, `import './registerServiceWorker'`)
+  api.injectImports(api.entryFile, `
+  // #ifdef H5
+  import './registerServiceWorker'
+  // #endif
+  `)
   api.render('./template')
 
   if (api.invoking && api.hasPlugin('typescript')) {
